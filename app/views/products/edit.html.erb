@@ -4,7 +4,7 @@
 
 <br>
 
-<div>
-  <%= link_to "Show this product", @product %> |
-  <%= link_to "Back to products", products_path %>
+<div class="btn-group" role="group" aria-label="Button group">
+  <%= link_to "Show this product", @product, class: 'btn btn-primary' %>
+  <%= link_to "Back to products", products_path, class: 'btn btn-secondary' %>
 </div>

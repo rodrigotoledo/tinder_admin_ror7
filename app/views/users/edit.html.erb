@@ -4,7 +4,7 @@
 
 <br>
 
-<div>
-  <%= link_to "Show this user", @user %> |
-  <%= link_to "Back to users", users_path %>
+<div class="btn-group" role="group" aria-label="Button group">
+  <%= link_to "Show this user", user_path(@user), class: 'btn btn-primary' %>
+  <%= link_to "Back to users", users_path, class: 'btn btn-secondary' %>
 </div>

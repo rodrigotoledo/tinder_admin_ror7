@@ -1,31 +1,25 @@
-<div class="card">
-  <div class="card-body">  
-    <div id="<%= dom_id user %>">
-      <p>
-        <strong>Avatar:</strong>
-        <%= user.avatar %>
-      </p>
+<%= turbo_frame_tag dom_id(user) do %>
+<div class="card mb-3">
+  <div class="card-header">
+    <%= user.first_name %> - <%= user.last_name %>
+  </div>
+  <div class="card-body">
+    <p>
+      <strong>Avatar:</strong>
+      <%= user.avatar %>
+    </p>
+    <p>
+      <strong>Occupation:</strong>
+      <%= user.occupation %>
+    </p>
 
-      <p>
-        <strong>First name:</strong>
-        <%= user.first_name %>
-      </p>
-
-      <p>
-        <strong>Last name:</strong>
-        <%= user.last_name %>
-      </p>
-
-      <p>
-        <strong>Occupation:</strong>
-        <%= user.occupation %>
-      </p>
-
-      <p>
-        <strong>Age:</strong>
-        <%= user.age %>
-      </p>
-
-    </div>
+    <p>
+      <strong>Age:</strong>
+      <%= user.age %>
+    </p>
+  </div>
+  <div class="card-footer">
+    <%= link_to "Show this user", user, data: { turbo_frame: "_top" } %>
+  </div>
 </div>
-</div>
+<% end %>

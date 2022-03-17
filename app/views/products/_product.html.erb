@@ -1,11 +1,9 @@
 <%= turbo_frame_tag dom_id(product) do %>
 <div class="card mb-3">
+  <div class="card-header">
+    <%= product.name %>
+  </div>
   <div class="card-body">
-    <p>
-      <strong>Name:</strong>
-      <%= product.name %>
-    </p>
-
     <p>
       <strong>Description:</strong>
       <%= product.description %>
@@ -25,10 +23,9 @@
       <strong>Is Active:</strong>
       <%= product.is_active? ? 'Yes' : 'No' %>
     </p>
-
-    <p>
-      <%= link_to "Show this product", product, data: { turbo_frame: "_top" } %>
-    </p>
+  </div>
+  <div class="card-footer">
+    <%= link_to "Show this product", product, data: { turbo_frame: "_top" } %>
   </div>
 </div>
 <% end %>

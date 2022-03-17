@@ -2,9 +2,8 @@
 
 <%= render @user %>
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+<div class="btn-group" role="group" aria-label="Button group">
+  <%= link_to "Edit this user", edit_user_path(@user), class: 'btn btn-primary' %>
+  <%= link_to "Back to users", users_path, class: 'btn btn-secondary' %>
+  <%= button_to "Destroy this user", @user, method: :delete, class: 'btn btn-danger' %>
 </div>
