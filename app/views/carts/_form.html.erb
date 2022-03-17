@@ -1,0 +1,8 @@
+<%= bootstrap_form_for(cart) do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :phone %>
+  <%= form.text_field :address %>
+  <%= form.datetime_field :scheduled_at %>
+
+  <%= form.submit %>
+<% end %>

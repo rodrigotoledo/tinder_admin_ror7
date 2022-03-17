@@ -1,0 +1,8 @@
+<%= bootstrap_form_for(product) do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :description %>
+  <%= form.text_field :size %>
+  <%= form.text_field :photo %>
+  <%= form.check_box :is_active %>
+  <%= form.submit %>
+<% end %>
