@@ -1,36 +1,37 @@
-<div class="card">
-  <div class="card-body">
-<div id="<%= dom_id cart %>">
-  <p>
-    <strong>Uuid:</strong>
+<%= turbo_frame_tag dom_id(cart) do %>
+<div class="card mb-3">
+  <div class="card-header">
     <%= cart.uuid %>
-  </p>
+  </div>
+  <div class="card-body">
+    <p>
+      <strong>Name:</strong>
+      <%= cart.name %>
+    </p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= cart.name %>
-  </p>
+    <p>
+      <strong>Phone:</strong>
+      <%= cart.phone %>
+    </p>
 
-  <p>
-    <strong>Phone:</strong>
-    <%= cart.phone %>
-  </p>
+    <p>
+      <strong>Address:</strong>
+      <%= cart.address %>
+    </p>
 
-  <p>
-    <strong>Address:</strong>
-    <%= cart.address %>
-  </p>
+    <p>
+      <strong>Scheduled at:</strong>
+      <%= cart.scheduled_at %>
+    </p>
 
-  <p>
-    <strong>Scheduled at:</strong>
-    <%= cart.scheduled_at %>
-  </p>
+    <p>
+      <strong>Status:</strong>
+      <%= cart.status %>
+    </p>
 
-  <p>
-    <strong>Status:</strong>
-    <%= cart.status %>
-  </p>
-
+  </div>
+  <div class="card-footer">
+    <%= link_to "Show this cart", cart, data: { turbo_frame: "_top" } %>
+  </div>
 </div>
-</div>
-</div>
+ <% end %>
